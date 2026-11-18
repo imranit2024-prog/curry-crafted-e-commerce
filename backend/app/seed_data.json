@@ -1,0 +1,1398 @@
+{
+ "config": {
+  "delivery": {
+   "chilled": {
+    "minOrderPence": 2000,
+    "chargePence": 399,
+    "freeOverPence": 4000
+   },
+   "frozen": {
+    "minOrderPence": 3000,
+    "chargePence": 599,
+    "freeOverPence": 6000
+   }
+  },
+  "chilledSchedule": {
+   "deliveryWeekdays": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "slots": [
+    {
+     "id": "am",
+     "label": "10am – 1pm"
+    },
+    {
+     "id": "pm",
+     "label": "1pm – 4pm"
+    },
+    {
+     "id": "eve",
+     "label": "5pm – 8pm"
+    }
+   ],
+   "capacityPerSlot": 12,
+   "cutoffHour": 12,
+   "cutoffDaysBefore": 2,
+   "horizonDays": 21
+  },
+  "frozenSchedule": {
+   "dispatchWeekdays": [
+    1,
+    2,
+    3
+   ],
+   "cutoffHour": 12,
+   "transitDaysMin": 1,
+   "transitDaysMax": 2
+  },
+  "rewards": {
+   "pointsPerPound": 1,
+   "pointValuePence": 5,
+   "minRedeemPoints": 100,
+   "expiryMonths": 12,
+   "doublePoints": {
+    "active": true,
+    "label": "Double points on every order this month"
+   }
+  },
+  "referral": {
+   "referrerPoints": 100,
+   "friendPoints": 100,
+   "minQualifyingOrderPence": 2500
+  },
+  "guestCheckout": true,
+  "contact": {
+   "email": "hello@currycrafted.example",
+   "phone": "To be confirmed",
+   "address": "Curry Crafted kitchen address — to be confirmed",
+   "hours": "Customer care hours — to be confirmed"
+  }
+ },
+ "chilledPostcodes": [
+  "DY1",
+  "DY2",
+  "DY3",
+  "DY4",
+  "DY5",
+  "DY6",
+  "DY8",
+  "DY9",
+  "B62",
+  "B63",
+  "B64",
+  "B65"
+ ],
+ "frozenRestrictions": [
+  {
+   "prefix": "JE",
+   "kind": "excluded",
+   "surchargePence": 0,
+   "note": "We can't currently deliver frozen food to Jersey."
+  },
+  {
+   "prefix": "GY",
+   "kind": "excluded",
+   "surchargePence": 0,
+   "note": "We can't currently deliver frozen food to Guernsey."
+  },
+  {
+   "prefix": "IM",
+   "kind": "excluded",
+   "surchargePence": 0,
+   "note": "We can't currently deliver frozen food to the Isle of Man."
+  },
+  {
+   "prefix": "HS",
+   "kind": "surcharge",
+   "surchargePence": 400,
+   "note": "Scottish islands: an extended courier service applies."
+  },
+  {
+   "prefix": "ZE",
+   "kind": "surcharge",
+   "surchargePence": 400,
+   "note": "Scottish islands: an extended courier service applies."
+  },
+  {
+   "prefix": "KW",
+   "kind": "surcharge",
+   "surchargePence": 400,
+   "note": "Scottish Highlands and islands: an extended courier service applies."
+  },
+  {
+   "prefix": "IV",
+   "kind": "surcharge",
+   "surchargePence": 400,
+   "note": "Scottish Highlands: an extended courier service applies."
+  },
+  {
+   "prefix": "BT",
+   "kind": "surcharge",
+   "surchargePence": 400,
+   "note": "Northern Ireland: an extended courier service applies."
+  }
+ ],
+ "promoCodes": [
+  {
+   "code": "WELCOME10",
+   "kind": "percent",
+   "value": 10,
+   "minSpendPence": 2500,
+   "description": "10% off your order"
+  }
+ ],
+ "bundles": [
+  {
+   "slug": "solo-supper",
+   "name": "The Solo Supper",
+   "description": "One main and one side. A proper dinner for one, sorted.",
+   "image": "/images/story-table.jpg",
+   "range": "chilled",
+   "serves": "Serves 1",
+   "mainsCount": 1,
+   "sidesCount": 1,
+   "pricePence": 975,
+   "sortOrder": 1
+  },
+  {
+   "slug": "dinner-for-two",
+   "name": "Dinner for Two",
+   "description": "Two mains and two sides to share across the table.",
+   "image": "/images/collection-chilled.jpg",
+   "range": "chilled",
+   "serves": "Serves 2",
+   "mainsCount": 2,
+   "sidesCount": 2,
+   "pricePence": 1895,
+   "sortOrder": 2
+  },
+  {
+   "slug": "family-table",
+   "name": "The Family Table",
+   "description": "Four mains and four sides. Everyone gets their favourite.",
+   "image": "/images/bundle-feast.jpg",
+   "range": "chilled",
+   "serves": "Serves 4",
+   "mainsCount": 4,
+   "sidesCount": 4,
+   "pricePence": 3595,
+   "sortOrder": 3
+  },
+  {
+   "slug": "freezer-starter",
+   "name": "Freezer Starter",
+   "description": "Three mains and two sides to keep on standby.",
+   "image": "/images/collection-frozen.jpg",
+   "range": "frozen",
+   "serves": "3 meals",
+   "mainsCount": 3,
+   "sidesCount": 2,
+   "pricePence": 2395,
+   "sortOrder": 4
+  },
+  {
+   "slug": "freezer-fill",
+   "name": "The Freezer Fill",
+   "description": "Six mains and four sides. A fortnight of easy dinners.",
+   "image": "/images/collection-frozen.jpg",
+   "range": "frozen",
+   "serves": "6 meals",
+   "mainsCount": 6,
+   "sidesCount": 4,
+   "pricePence": 4495,
+   "sortOrder": 5
+  },
+  {
+   "slug": "big-freeze",
+   "name": "The Big Freeze",
+   "description": "Ten mains and six sides for a fully stocked freezer.",
+   "image": "/images/collection-frozen.jpg",
+   "range": "frozen",
+   "serves": "10 meals",
+   "mainsCount": 10,
+   "sidesCount": 6,
+   "pricePence": 7195,
+   "sortOrder": 6
+  }
+ ],
+ "products": [
+  {
+   "slug": "butter-chicken",
+   "name": "Butter Chicken",
+   "range": "chilled",
+   "category": "chicken",
+   "shortDescription": "Chargrilled chicken thigh in a silky tomato and butter sauce.",
+   "description": "Our signature. Chicken thigh is marinated overnight in yoghurt and spices, chargrilled, then folded through a slow-reduced tomato makhani finished with butter, cream and dried fenugreek leaf. Rich, rounded and gently spiced.",
+   "image": "/images/products/butter-chicken.jpg",
+   "gallery": [
+    "/images/products/butter-chicken.jpg",
+    "/images/products/butter-chicken-detail.jpg"
+   ],
+   "variants": [
+    {
+     "id": "single",
+     "label": "Single · 350g",
+     "pricePence": 795
+    },
+    {
+     "id": "sharing",
+     "label": "Sharing · 700g",
+     "pricePence": 1470
+    }
+   ],
+   "dietary": [],
+   "spiceLevel": 1,
+   "ingredients": "Chicken thigh (38%), tomato, onion, **cream (milk)**, **butter (milk)**, **yoghurt (milk)**, ginger, garlic, rapeseed oil, ground spices, dried fenugreek leaf, sugar, salt.",
+   "allergens": [
+    "milk"
+   ],
+   "mayContain": [
+    "nuts",
+    "mustard"
+   ],
+   "nutrition": {
+    "energyKcal": 152,
+    "fat": 9.1,
+    "saturates": 4.2,
+    "carbs": 5.6,
+    "sugars": 3.9,
+    "protein": 11.8,
+    "salt": 0.62
+   },
+   "storage": "Keep refrigerated at 5°C or below and eat by the use-by date on the pack. Once opened, consume within 24 hours. Suitable for home freezing: freeze on the day of delivery and use within one month. Defrost fully in the fridge before reheating.",
+   "preparation": [
+    "Microwave (800W): pierce the film, heat for 3 minutes, stir, then heat for a further 1–2 minutes.",
+    "Hob: empty into a saucepan and warm over a medium heat for 6–8 minutes, stirring occasionally.",
+    "Check the food is piping hot throughout before serving. Do not reheat more than once."
+   ],
+   "servings": "Single serves 1 · Sharing serves 2",
+   "active": true,
+   "inStock": true,
+   "maxPerOrder": 12,
+   "popularity": 98,
+   "featured": true,
+   "daysAgo": 120
+  },
+  {
+   "slug": "chicken-tikka-masala",
+   "name": "Chicken Tikka Masala",
+   "range": "chilled",
+   "category": "chicken",
+   "shortDescription": "Smoky tikka pieces in a bold, spiced tomato masala.",
+   "description": "Chicken breast marinated in a tikka paste, cooked hard for a little char, then simmered in a tomato and onion masala with a touch of cream. Deeper and spicier than our Butter Chicken.",
+   "image": "/images/products/chicken-tikka-masala.jpg",
+   "gallery": [
+    "/images/products/chicken-tikka-masala.jpg",
+    "/images/products/chicken-tikka-masala-detail.jpg"
+   ],
+   "variants": [
+    {
+     "id": "single",
+     "label": "Single · 350g",
+     "pricePence": 795
+    },
+    {
+     "id": "sharing",
+     "label": "Sharing · 700g",
+     "pricePence": 1470
+    }
+   ],
+   "dietary": [],
+   "spiceLevel": 2,
+   "ingredients": "Chicken breast (36%), tomato, onion, **yoghurt (milk)**, **cream (milk)**, rapeseed oil, ginger, garlic, tomato purée, ground spices, paprika, coriander leaf, salt.",
+   "allergens": [
+    "milk"
+   ],
+   "mayContain": [
+    "nuts",
+    "mustard"
+   ],
+   "nutrition": {
+    "energyKcal": 138,
+    "fat": 7.2,
+    "saturates": 2.6,
+    "carbs": 5.9,
+    "sugars": 4.1,
+    "protein": 12.4,
+    "salt": 0.68
+   },
+   "storage": "Keep refrigerated at 5°C or below and eat by the use-by date on the pack. Once opened, consume within 24 hours. Suitable for home freezing: freeze on the day of delivery and use within one month. Defrost fully in the fridge before reheating.",
+   "preparation": [
+    "Microwave (800W): pierce the film, heat for 3 minutes, stir, then heat for a further 1–2 minutes.",
+    "Hob: empty into a saucepan and warm over a medium heat for 6–8 minutes, stirring occasionally.",
+    "Check the food is piping hot throughout before serving. Do not reheat more than once."
+   ],
+   "servings": "Single serves 1 · Sharing serves 2",
+   "active": true,
+   "inStock": true,
+   "maxPerOrder": 12,
+   "popularity": 95,
+   "featured": true,
+   "daysAgo": 110
+  },
+  {
+   "slug": "lamb-rogan-josh",
+   "name": "Lamb Rogan Josh",
+   "range": "chilled",
+   "category": "lamb",
+   "shortDescription": "Slow-braised lamb in a deep Kashmiri chilli gravy.",
+   "description": "Diced lamb shoulder braised for hours until it yields to a spoon, in a gravy built on browned onions, Kashmiri chilli, cardamom and clove. Warming rather than fiery.",
+   "image": "/images/products/lamb-rogan-josh.jpg",
+   "gallery": [
+    "/images/products/lamb-rogan-josh.jpg",
+    "/images/products/lamb-rogan-josh-detail.jpg"
+   ],
+   "variants": [
+    {
+     "id": "single",
+     "label": "Single · 350g",
+     "pricePence": 895
+    },
+    {
+     "id": "sharing",
+     "label": "Sharing · 700g",
+     "pricePence": 1655
+    }
+   ],
+   "dietary": [],
+   "spiceLevel": 2,
+   "ingredients": "Lamb shoulder (40%), onion, tomato, **yoghurt (milk)**, rapeseed oil, ginger, garlic, Kashmiri chilli, ground spices, whole cardamom, clove, bay leaf, salt.",
+   "allergens": [
+    "milk"
+   ],
+   "mayContain": [
+    "mustard"
+   ],
+   "nutrition": {
+    "energyKcal": 168,
+    "fat": 10.4,
+    "saturates": 3.9,
+    "carbs": 4.8,
+    "sugars": 3.2,
+    "protein": 13.6,
+    "salt": 0.7
+   },
+   "storage": "Keep refrigerated at 5°C or below and eat by the use-by date on the pack. Once opened, consume within 24 hours. Suitable for home freezing: freeze on the day of delivery and use within one month. Defrost fully in the fridge before reheating.",
+   "preparation": [
+    "Microwave (800W): pierce the film, heat for 3 minutes, stir, then heat for a further 1–2 minutes.",
+    "Hob: empty into a saucepan and warm over a medium heat for 6–8 minutes, stirring occasionally.",
+    "Check the food is piping hot throughout before serving. Do not reheat more than once."
+   ],
+   "servings": "Single serves 1 · Sharing serves 2",
+   "active": true,
+   "inStock": true,
+   "maxPerOrder": 12,
+   "popularity": 90,
+   "featured": true,
+   "daysAgo": 100
+  },
+  {
+   "slug": "tarka-dal",
+   "name": "Tarka Dal",
+   "range": "chilled",
+   "category": "vegetarian",
+   "shortDescription": "Golden lentils finished with sizzled garlic, cumin and chilli.",
+   "description": "Yellow split lentils cooked down until creamy, then finished with a hot tarka of garlic, cumin seed, mustard seed and dried chilli. Comforting as a main, generous as a side.",
+   "image": "/images/products/tarka-dal.jpg",
+   "gallery": [
+    "/images/products/tarka-dal.jpg",
+    "/images/products/tarka-dal-detail.jpg"
+   ],
+   "variants": [
+    {
+     "id": "single",
+     "label": "Single · 350g",
+     "pricePence": 595
+    },
+    {
+     "id": "sharing",
+     "label": "Sharing · 700g",
+     "pricePence": 1100
+    }
+   ],
+   "dietary": [
+    "vegan",
+    "vegetarian"
+   ],
+   "spiceLevel": 1,
+   "ingredients": "Water, yellow split lentils (28%), onion, tomato, rapeseed oil, garlic, ginger, cumin seed, **mustard** seed, turmeric, dried chilli, coriander leaf, salt.",
+   "allergens": [
+    "mustard"
+   ],
+   "mayContain": [],
+   "nutrition": {
+    "energyKcal": 104,
+    "fat": 3.4,
+    "saturates": 0.3,
+    "carbs": 12.1,
+    "sugars": 1.6,
+    "protein": 5.2,
+    "salt": 0.55
+   },
+   "storage": "Keep refrigerated at 5°C or below and eat by the use-by date on the pack. Once opened, consume within 24 hours. Suitable for home freezing: freeze on the day of delivery and use within one month. Defrost fully in the fridge before reheating.",
+   "preparation": [
+    "Microwave (800W): pierce the film, heat for 3 minutes, stir, then heat for a further 1–2 minutes.",
+    "Hob: empty into a saucepan and warm over a medium heat for 6–8 minutes, stirring occasionally.",
+    "Check the food is piping hot throughout before serving. Do not reheat more than once."
+   ],
+   "servings": "Single serves 1 · Sharing serves 2",
+   "active": true,
+   "inStock": true,
+   "maxPerOrder": 12,
+   "popularity": 80,
+   "featured": true,
+   "daysAgo": 90
+  },
+  {
+   "slug": "paneer-makhani",
+   "name": "Paneer Makhani",
+   "range": "chilled",
+   "category": "vegetarian",
+   "shortDescription": "Soft paneer in a velvety tomato, butter and cashew sauce.",
+   "description": "Cubes of fresh paneer in the same slow-reduced makhani as our Butter Chicken, enriched with cashew for extra body. A vegetarian dish that never feels like second choice.",
+   "image": "/images/products/paneer-makhani.jpg",
+   "gallery": [
+    "/images/products/paneer-makhani.jpg",
+    "/images/products/paneer-makhani-detail.jpg"
+   ],
+   "variants": [
+    {
+     "id": "single",
+     "label": "Single · 350g",
+     "pricePence": 695
+    },
+    {
+     "id": "sharing",
+     "label": "Sharing · 700g",
+     "pricePence": 1285
+    }
+   ],
+   "dietary": [
+    "vegetarian"
+   ],
+   "spiceLevel": 1,
+   "ingredients": "Paneer (**milk**) (32%), tomato, onion, **cream (milk)**, **butter (milk)**, **cashew nuts**, ginger, garlic, rapeseed oil, ground spices, dried fenugreek leaf, sugar, salt.",
+   "allergens": [
+    "milk",
+    "nuts"
+   ],
+   "mayContain": [
+    "mustard"
+   ],
+   "nutrition": {
+    "energyKcal": 176,
+    "fat": 12.8,
+    "saturates": 6.9,
+    "carbs": 6.1,
+    "sugars": 4.2,
+    "protein": 8.4,
+    "salt": 0.6
+   },
+   "storage": "Keep refrigerated at 5°C or below and eat by the use-by date on the pack. Once opened, consume within 24 hours. Suitable for home freezing: freeze on the day of delivery and use within one month. Defrost fully in the fridge before reheating.",
+   "preparation": [
+    "Microwave (800W): pierce the film, heat for 3 minutes, stir, then heat for a further 1–2 minutes.",
+    "Hob: empty into a saucepan and warm over a medium heat for 6–8 minutes, stirring occasionally.",
+    "Check the food is piping hot throughout before serving. Do not reheat more than once."
+   ],
+   "servings": "Single serves 1 · Sharing serves 2",
+   "active": true,
+   "inStock": true,
+   "maxPerOrder": 12,
+   "popularity": 78,
+   "featured": false,
+   "daysAgo": 40
+  },
+  {
+   "slug": "jeera-basmati-rice",
+   "name": "Jeera Basmati Rice",
+   "range": "chilled",
+   "category": "sides",
+   "shortDescription": "Fluffy aged basmati with toasted cumin and fresh herbs.",
+   "description": "Long-grain aged basmati steamed with toasted cumin seed and finished with fresh coriander. The quiet partner every curry needs.",
+   "image": "/images/products/jeera-basmati-rice.jpg",
+   "gallery": [
+    "/images/products/jeera-basmati-rice.jpg",
+    "/images/products/jeera-basmati-rice-detail.jpg"
+   ],
+   "variants": [
+    {
+     "id": "standard",
+     "label": "Pouch · 250g",
+     "pricePence": 275
+    }
+   ],
+   "dietary": [
+    "vegan",
+    "vegetarian"
+   ],
+   "spiceLevel": 0,
+   "ingredients": "Cooked basmati rice (96%), rapeseed oil, cumin seed, coriander leaf, salt.",
+   "allergens": [],
+   "mayContain": [],
+   "nutrition": {
+    "energyKcal": 141,
+    "fat": 2.1,
+    "saturates": 0.2,
+    "carbs": 27.4,
+    "sugars": 0.2,
+    "protein": 3,
+    "salt": 0.3
+   },
+   "storage": "Keep refrigerated at 5°C or below and eat by the use-by date on the pack. Once opened, consume within 24 hours. Suitable for home freezing: freeze on the day of delivery and use within one month. Defrost fully in the fridge before reheating.",
+   "preparation": [
+    "Microwave (800W): pierce the film and heat for 2 minutes.",
+    "Oven (breads and bhajis): place on a baking tray at 180°C fan for 4–6 minutes.",
+    "Check the food is piping hot throughout before serving."
+   ],
+   "servings": "Serves 1–2",
+   "active": true,
+   "inStock": true,
+   "maxPerOrder": 12,
+   "popularity": 85,
+   "featured": false,
+   "daysAgo": 95
+  },
+  {
+   "slug": "butter-naan",
+   "name": "Butter Naan",
+   "range": "chilled",
+   "category": "sides",
+   "shortDescription": "Soft, blistered naan brushed with butter. Pack of two.",
+   "description": "Hand-stretched naan baked hot for a blistered crust and pillowy middle, then brushed with butter. Warm through in minutes.",
+   "image": "/images/products/butter-naan.jpg",
+   "gallery": [
+    "/images/products/butter-naan.jpg",
+    "/images/products/butter-naan-detail.jpg"
+   ],
+   "variants": [
+    {
+     "id": "standard",
+     "label": "Pack of 2",
+     "pricePence": 295
+    }
+   ],
+   "dietary": [
+    "vegetarian"
+   ],
+   "spiceLevel": 0,
+   "ingredients": "**Wheat** flour, water, **yoghurt (milk)**, **butter (milk)**, rapeseed oil, sugar, yeast, raising agent, salt.",
+   "allergens": [
+    "gluten",
+    "milk"
+   ],
+   "mayContain": [
+    "sesame",
+    "eggs"
+   ],
+   "nutrition": null,
+   "storage": "Keep refrigerated at 5°C or below and eat by the use-by date on the pack. Once opened, consume within 24 hours. Suitable for home freezing: freeze on the day of delivery and use within one month. Defrost fully in the fridge before reheating.",
+   "preparation": [
+    "Microwave (800W): pierce the film and heat for 2 minutes.",
+    "Oven (breads and bhajis): place on a baking tray at 180°C fan for 4–6 minutes.",
+    "Check the food is piping hot throughout before serving."
+   ],
+   "servings": "Serves 2",
+   "active": true,
+   "inStock": true,
+   "maxPerOrder": 12,
+   "popularity": 83,
+   "featured": false,
+   "daysAgo": 60
+  },
+  {
+   "slug": "onion-bhajis",
+   "name": "Onion Bhajis",
+   "range": "chilled",
+   "category": "sides",
+   "shortDescription": "Crisp, craggy onion fritters in spiced gram batter. Pack of four.",
+   "description": "Sliced onion bound in a gram flour batter with cumin, coriander and green chilli, fried until craggy and golden. Crisp up in the oven.",
+   "image": "/images/products/onion-bhajis.jpg",
+   "gallery": [
+    "/images/products/onion-bhajis.jpg",
+    "/images/products/onion-bhajis-detail.jpg"
+   ],
+   "variants": [
+    {
+     "id": "standard",
+     "label": "Pack of 4",
+     "pricePence": 350
+    }
+   ],
+   "dietary": [
+    "vegan",
+    "vegetarian"
+   ],
+   "spiceLevel": 1,
+   "ingredients": "Onion (58%), gram flour, rapeseed oil, coriander leaf, green chilli, cumin seed, turmeric, raising agent, salt.",
+   "allergens": [],
+   "mayContain": [
+    "gluten",
+    "mustard"
+   ],
+   "nutrition": null,
+   "storage": "Keep refrigerated at 5°C or below and eat by the use-by date on the pack. Once opened, consume within 24 hours. Suitable for home freezing: freeze on the day of delivery and use within one month. Defrost fully in the fridge before reheating.",
+   "preparation": [
+    "Microwave (800W): pierce the film and heat for 2 minutes.",
+    "Oven (breads and bhajis): place on a baking tray at 180°C fan for 4–6 minutes.",
+    "Check the food is piping hot throughout before serving."
+   ],
+   "servings": "Serves 2",
+   "active": true,
+   "inStock": true,
+   "maxPerOrder": 12,
+   "popularity": 70,
+   "featured": false,
+   "daysAgo": 20
+  },
+  {
+   "slug": "mint-raita",
+   "name": "Cucumber & Mint Raita",
+   "range": "chilled",
+   "category": "accompaniments",
+   "shortDescription": "Cooling yoghurt with cucumber, mint and roasted cumin.",
+   "description": "Thick yoghurt with grated cucumber, fresh mint and a pinch of roasted cumin. Made to calm things down.",
+   "image": "/images/products/mint-raita.jpg",
+   "gallery": [
+    "/images/products/mint-raita.jpg",
+    "/images/products/mint-raita-detail.jpg"
+   ],
+   "variants": [
+    {
+     "id": "standard",
+     "label": "Pot · 150g",
+     "pricePence": 195
+    }
+   ],
+   "dietary": [
+    "vegetarian"
+   ],
+   "spiceLevel": 0,
+   "ingredients": "**Yoghurt (milk)** (78%), cucumber, mint, roasted cumin, salt.",
+   "allergens": [
+    "milk"
+   ],
+   "mayContain": [],
+   "nutrition": null,
+   "storage": "Keep refrigerated at 5°C or below and eat by the use-by date on the pack. Once opened, consume within 24 hours. Suitable for home freezing: freeze on the day of delivery and use within one month. Defrost fully in the fridge before reheating.",
+   "preparation": [
+    "Ready to serve. Stir before serving and keep refrigerated once opened."
+   ],
+   "servings": "Serves 2",
+   "active": true,
+   "inStock": true,
+   "maxPerOrder": 12,
+   "popularity": 60,
+   "featured": false,
+   "daysAgo": 70
+  },
+  {
+   "slug": "mango-pickle",
+   "name": "Spiced Mango Pickle",
+   "range": "chilled",
+   "category": "accompaniments",
+   "shortDescription": "Sharp, punchy mango pickle with mustard seed and chilli.",
+   "description": "Green mango cured with mustard seed, fenugreek and chilli for a sharp, salty, properly punchy pickle. A little goes a long way.",
+   "image": "/images/products/mango-pickle.jpg",
+   "gallery": [
+    "/images/products/mango-pickle.jpg",
+    "/images/products/mango-pickle-detail.jpg"
+   ],
+   "variants": [
+    {
+     "id": "standard",
+     "label": "Pot · 100g",
+     "pricePence": 225
+    }
+   ],
+   "dietary": [
+    "vegan",
+    "vegetarian"
+   ],
+   "spiceLevel": 2,
+   "ingredients": "Green mango (62%), rapeseed oil, **mustard** seed, chilli, fenugreek seed, turmeric, salt.",
+   "allergens": [
+    "mustard"
+   ],
+   "mayContain": [],
+   "nutrition": null,
+   "storage": "Keep refrigerated at 5°C or below and eat by the use-by date on the pack. Once opened, consume within 24 hours. Suitable for home freezing: freeze on the day of delivery and use within one month. Defrost fully in the fridge before reheating.",
+   "preparation": [
+    "Ready to serve. Stir before serving and keep refrigerated once opened."
+   ],
+   "servings": "Serves 4",
+   "active": true,
+   "inStock": true,
+   "maxPerOrder": 12,
+   "popularity": 50,
+   "featured": false,
+   "daysAgo": 15
+  },
+  {
+   "slug": "chicken-korma",
+   "name": "Chicken Korma",
+   "range": "frozen",
+   "category": "chicken",
+   "shortDescription": "Tender chicken in a mild, creamy coconut and almond sauce.",
+   "description": "A korma with real depth: chicken breast in a sauce of browned onion, coconut, ground almond and cream, scented with cardamom. Mild, never bland. Frozen within hours of cooking.",
+   "image": "/images/products/chicken-korma.jpg",
+   "gallery": [
+    "/images/products/chicken-korma.jpg",
+    "/images/products/chicken-korma-detail.jpg"
+   ],
+   "variants": [
+    {
+     "id": "single",
+     "label": "Single · 350g",
+     "pricePence": 695
+    },
+    {
+     "id": "sharing",
+     "label": "Sharing · 700g",
+     "pricePence": 1285
+    }
+   ],
+   "dietary": [],
+   "spiceLevel": 0,
+   "ingredients": "Chicken breast (36%), onion, **cream (milk)**, coconut, **almonds (nuts)**, **yoghurt (milk)**, rapeseed oil, ginger, garlic, ground spices, cardamom, sugar, salt.",
+   "allergens": [
+    "milk",
+    "nuts"
+   ],
+   "mayContain": [
+    "mustard"
+   ],
+   "nutrition": {
+    "energyKcal": 171,
+    "fat": 11.2,
+    "saturates": 5.4,
+    "carbs": 5.1,
+    "sugars": 3.4,
+    "protein": 12,
+    "salt": 0.58
+   },
+   "storage": "Keep frozen at -18°C or below. Put straight into the freezer when your delivery arrives. If the product has defrosted, keep it refrigerated, use within 24 hours and do not refreeze.",
+   "preparation": [
+    "Cook from frozen — there is no need to defrost.",
+    "Microwave (800W): pierce the film, heat for 5 minutes, stir, then heat for a further 3–4 minutes.",
+    "Oven: empty into an ovenproof dish, cover and bake at 180°C fan for 35–40 minutes, stirring halfway.",
+    "Check the food is piping hot throughout before serving. Do not refreeze."
+   ],
+   "servings": "Single serves 1 · Sharing serves 2",
+   "active": true,
+   "inStock": true,
+   "maxPerOrder": 12,
+   "popularity": 88,
+   "featured": true,
+   "daysAgo": 85
+  },
+  {
+   "slug": "chicken-jalfrezi",
+   "name": "Chicken Jalfrezi",
+   "range": "frozen",
+   "category": "chicken",
+   "shortDescription": "Chicken, peppers and green chilli in a hot, fresh tomato sauce.",
+   "description": "Stir-fried chicken with peppers, onion and plenty of green chilli in a bright, thick tomato sauce. Our hottest dish.",
+   "image": "/images/products/chicken-jalfrezi.jpg",
+   "gallery": [
+    "/images/products/chicken-jalfrezi.jpg",
+    "/images/products/chicken-jalfrezi-detail.jpg"
+   ],
+   "variants": [
+    {
+     "id": "single",
+     "label": "Single · 350g",
+     "pricePence": 695
+    },
+    {
+     "id": "sharing",
+     "label": "Sharing · 700g",
+     "pricePence": 1285
+    }
+   ],
+   "dietary": [],
+   "spiceLevel": 3,
+   "ingredients": "Chicken breast (36%), tomato, mixed peppers (14%), onion, rapeseed oil, green chilli, ginger, garlic, ground spices, coriander leaf, salt.",
+   "allergens": [],
+   "mayContain": [
+    "milk",
+    "mustard",
+    "nuts"
+   ],
+   "nutrition": {
+    "energyKcal": 118,
+    "fat": 5.1,
+    "saturates": 0.7,
+    "carbs": 5.4,
+    "sugars": 3.8,
+    "protein": 12.6,
+    "salt": 0.64
+   },
+   "storage": "Keep frozen at -18°C or below. Put straight into the freezer when your delivery arrives. If the product has defrosted, keep it refrigerated, use within 24 hours and do not refreeze.",
+   "preparation": [
+    "Cook from frozen — there is no need to defrost.",
+    "Microwave (800W): pierce the film, heat for 5 minutes, stir, then heat for a further 3–4 minutes.",
+    "Oven: empty into an ovenproof dish, cover and bake at 180°C fan for 35–40 minutes, stirring halfway.",
+    "Check the food is piping hot throughout before serving. Do not refreeze."
+   ],
+   "servings": "Single serves 1 · Sharing serves 2",
+   "active": true,
+   "inStock": true,
+   "maxPerOrder": 12,
+   "popularity": 75,
+   "featured": false,
+   "daysAgo": 30
+  },
+  {
+   "slug": "chicken-biryani",
+   "name": "Chicken Biryani",
+   "range": "frozen",
+   "category": "chicken",
+   "shortDescription": "Layered basmati and spiced chicken with mint and fried onion.",
+   "description": "Marinated chicken layered with par-cooked basmati, fried onion, mint and saffron, then steamed together. A complete meal in one tray.",
+   "image": "/images/products/chicken-biryani.jpg",
+   "gallery": [
+    "/images/products/chicken-biryani.jpg",
+    "/images/products/chicken-biryani-detail.jpg"
+   ],
+   "variants": [
+    {
+     "id": "single",
+     "label": "Single · 350g",
+     "pricePence": 750
+    },
+    {
+     "id": "sharing",
+     "label": "Sharing · 700g",
+     "pricePence": 1390
+    }
+   ],
+   "dietary": [],
+   "spiceLevel": 2,
+   "ingredients": "Cooked basmati rice (44%), chicken thigh (28%), onion, **yoghurt (milk)**, rapeseed oil, ginger, garlic, mint, ground spices, saffron, salt.",
+   "allergens": [
+    "milk"
+   ],
+   "mayContain": [
+    "nuts",
+    "mustard"
+   ],
+   "nutrition": {
+    "energyKcal": 158,
+    "fat": 5.6,
+    "saturates": 1.3,
+    "carbs": 18.2,
+    "sugars": 1.4,
+    "protein": 8.6,
+    "salt": 0.6
+   },
+   "storage": "Keep frozen at -18°C or below. Put straight into the freezer when your delivery arrives. If the product has defrosted, keep it refrigerated, use within 24 hours and do not refreeze.",
+   "preparation": [
+    "Cook from frozen — there is no need to defrost.",
+    "Microwave (800W): pierce the film, heat for 5 minutes, stir, then heat for a further 3–4 minutes.",
+    "Oven: empty into an ovenproof dish, cover and bake at 180°C fan for 35–40 minutes, stirring halfway.",
+    "Check the food is piping hot throughout before serving. Do not refreeze."
+   ],
+   "servings": "Single serves 1 · Sharing serves 2",
+   "active": true,
+   "inStock": true,
+   "maxPerOrder": 12,
+   "popularity": 86,
+   "featured": true,
+   "daysAgo": 10
+  },
+  {
+   "slug": "lamb-bhuna",
+   "name": "Lamb Bhuna",
+   "range": "frozen",
+   "category": "lamb",
+   "shortDescription": "Lamb cooked down in a thick, intensely spiced onion masala.",
+   "description": "Lamb shoulder fried with spices and cooked right down so the thick masala clings to every piece. Dry-style, concentrated and deeply savoury.",
+   "image": "/images/products/lamb-bhuna.jpg",
+   "gallery": [
+    "/images/products/lamb-bhuna.jpg",
+    "/images/products/lamb-bhuna-detail.jpg"
+   ],
+   "variants": [
+    {
+     "id": "single",
+     "label": "Single · 350g",
+     "pricePence": 795
+    },
+    {
+     "id": "sharing",
+     "label": "Sharing · 700g",
+     "pricePence": 1470
+    }
+   ],
+   "dietary": [],
+   "spiceLevel": 2,
+   "ingredients": "Lamb shoulder (42%), onion, tomato, rapeseed oil, ginger, garlic, green pepper, ground spices, coriander leaf, salt.",
+   "allergens": [],
+   "mayContain": [
+    "milk",
+    "mustard"
+   ],
+   "nutrition": {
+    "energyKcal": 174,
+    "fat": 11,
+    "saturates": 4,
+    "carbs": 4.4,
+    "sugars": 2.9,
+    "protein": 14.1,
+    "salt": 0.72
+   },
+   "storage": "Keep frozen at -18°C or below. Put straight into the freezer when your delivery arrives. If the product has defrosted, keep it refrigerated, use within 24 hours and do not refreeze.",
+   "preparation": [
+    "Cook from frozen — there is no need to defrost.",
+    "Microwave (800W): pierce the film, heat for 5 minutes, stir, then heat for a further 3–4 minutes.",
+    "Oven: empty into an ovenproof dish, cover and bake at 180°C fan for 35–40 minutes, stirring halfway.",
+    "Check the food is piping hot throughout before serving. Do not refreeze."
+   ],
+   "servings": "Single serves 1 · Sharing serves 2",
+   "active": true,
+   "inStock": true,
+   "maxPerOrder": 12,
+   "popularity": 72,
+   "featured": false,
+   "daysAgo": 50
+  },
+  {
+   "slug": "keema-peas",
+   "name": "Keema Peas",
+   "range": "frozen",
+   "category": "lamb",
+   "shortDescription": "Spiced minced lamb with garden peas, ginger and garam masala.",
+   "description": "Minced lamb browned with onion, ginger and garam masala, finished with garden peas. Brilliant with naan, or piled onto rice.",
+   "image": "/images/products/keema-peas.jpg",
+   "gallery": [
+    "/images/products/keema-peas.jpg",
+    "/images/products/keema-peas-detail.jpg"
+   ],
+   "variants": [
+    {
+     "id": "single",
+     "label": "Single · 350g",
+     "pricePence": 725
+    },
+    {
+     "id": "sharing",
+     "label": "Sharing · 700g",
+     "pricePence": 1340
+    }
+   ],
+   "dietary": [],
+   "spiceLevel": 2,
+   "ingredients": "Minced lamb (46%), onion, garden peas (12%), tomato, rapeseed oil, ginger, garlic, ground spices, coriander leaf, salt.",
+   "allergens": [],
+   "mayContain": [
+    "milk",
+    "mustard"
+   ],
+   "nutrition": {
+    "energyKcal": 182,
+    "fat": 12.4,
+    "saturates": 5.1,
+    "carbs": 4.6,
+    "sugars": 2.2,
+    "protein": 12.9,
+    "salt": 0.7
+   },
+   "storage": "Keep frozen at -18°C or below. Put straight into the freezer when your delivery arrives. If the product has defrosted, keep it refrigerated, use within 24 hours and do not refreeze.",
+   "preparation": [
+    "Cook from frozen — there is no need to defrost.",
+    "Microwave (800W): pierce the film, heat for 5 minutes, stir, then heat for a further 3–4 minutes.",
+    "Oven: empty into an ovenproof dish, cover and bake at 180°C fan for 35–40 minutes, stirring halfway.",
+    "Check the food is piping hot throughout before serving. Do not refreeze."
+   ],
+   "servings": "Single serves 1 · Sharing serves 2",
+   "active": true,
+   "inStock": true,
+   "maxPerOrder": 12,
+   "popularity": 65,
+   "featured": false,
+   "daysAgo": 25
+  },
+  {
+   "slug": "dal-makhani",
+   "name": "Dal Makhani",
+   "range": "frozen",
+   "category": "vegetarian",
+   "shortDescription": "Black lentils simmered overnight with butter and cream.",
+   "description": "Whole black lentils and kidney beans simmered low and slow, then enriched with butter and cream until dark, glossy and smoky.",
+   "image": "/images/products/dal-makhani.jpg",
+   "gallery": [
+    "/images/products/dal-makhani.jpg",
+    "/images/products/dal-makhani-detail.jpg"
+   ],
+   "variants": [
+    {
+     "id": "single",
+     "label": "Single · 350g",
+     "pricePence": 550
+    },
+    {
+     "id": "sharing",
+     "label": "Sharing · 700g",
+     "pricePence": 1020
+    }
+   ],
+   "dietary": [
+    "vegetarian"
+   ],
+   "spiceLevel": 1,
+   "ingredients": "Water, black lentils (22%), red kidney beans, tomato, **butter (milk)**, **cream (milk)**, onion, ginger, garlic, ground spices, dried fenugreek leaf, salt.",
+   "allergens": [
+    "milk"
+   ],
+   "mayContain": [
+    "mustard"
+   ],
+   "nutrition": {
+    "energyKcal": 126,
+    "fat": 5.8,
+    "saturates": 3.1,
+    "carbs": 11.4,
+    "sugars": 1.8,
+    "protein": 5.9,
+    "salt": 0.58
+   },
+   "storage": "Keep frozen at -18°C or below. Put straight into the freezer when your delivery arrives. If the product has defrosted, keep it refrigerated, use within 24 hours and do not refreeze.",
+   "preparation": [
+    "Cook from frozen — there is no need to defrost.",
+    "Microwave (800W): pierce the film, heat for 5 minutes, stir, then heat for a further 3–4 minutes.",
+    "Oven: empty into an ovenproof dish, cover and bake at 180°C fan for 35–40 minutes, stirring halfway.",
+    "Check the food is piping hot throughout before serving. Do not refreeze."
+   ],
+   "servings": "Single serves 1 · Sharing serves 2",
+   "active": true,
+   "inStock": true,
+   "maxPerOrder": 12,
+   "popularity": 77,
+   "featured": true,
+   "daysAgo": 45
+  },
+  {
+   "slug": "chana-masala",
+   "name": "Chana Masala",
+   "range": "frozen",
+   "category": "vegetarian",
+   "shortDescription": "Chickpeas in a tangy tomato masala with dried mango.",
+   "description": "Chickpeas cooked until tender in a tangy tomato and onion masala, sharpened with dried mango powder and finished with fresh coriander.",
+   "image": "/images/products/chana-masala.jpg",
+   "gallery": [
+    "/images/products/chana-masala.jpg",
+    "/images/products/chana-masala-detail.jpg"
+   ],
+   "variants": [
+    {
+     "id": "single",
+     "label": "Single · 350g",
+     "pricePence": 550
+    },
+    {
+     "id": "sharing",
+     "label": "Sharing · 700g",
+     "pricePence": 1020
+    }
+   ],
+   "dietary": [
+    "vegan",
+    "vegetarian"
+   ],
+   "spiceLevel": 2,
+   "ingredients": "Chickpeas (42%), tomato, onion, rapeseed oil, ginger, garlic, ground spices, dried mango powder, coriander leaf, salt.",
+   "allergens": [],
+   "mayContain": [
+    "mustard"
+   ],
+   "nutrition": {
+    "energyKcal": 121,
+    "fat": 4.2,
+    "saturates": 0.4,
+    "carbs": 13.6,
+    "sugars": 2.6,
+    "protein": 5.4,
+    "salt": 0.56
+   },
+   "storage": "Keep frozen at -18°C or below. Put straight into the freezer when your delivery arrives. If the product has defrosted, keep it refrigerated, use within 24 hours and do not refreeze.",
+   "preparation": [
+    "Cook from frozen — there is no need to defrost.",
+    "Microwave (800W): pierce the film, heat for 5 minutes, stir, then heat for a further 3–4 minutes.",
+    "Oven: empty into an ovenproof dish, cover and bake at 180°C fan for 35–40 minutes, stirring halfway.",
+    "Check the food is piping hot throughout before serving. Do not refreeze."
+   ],
+   "servings": "Single serves 1 · Sharing serves 2",
+   "active": true,
+   "inStock": true,
+   "maxPerOrder": 12,
+   "popularity": 68,
+   "featured": false,
+   "daysAgo": 35
+  },
+  {
+   "slug": "saag-paneer",
+   "name": "Saag Paneer",
+   "range": "frozen",
+   "category": "vegetarian",
+   "shortDescription": "Paneer in slow-cooked spinach with garlic and green chilli.",
+   "description": "Spinach cooked down with garlic, ginger and green chilli, then folded around cubes of paneer and finished with a little cream.",
+   "image": "/images/products/saag-paneer.jpg",
+   "gallery": [
+    "/images/products/saag-paneer.jpg",
+    "/images/products/saag-paneer-detail.jpg"
+   ],
+   "variants": [
+    {
+     "id": "single",
+     "label": "Single · 350g",
+     "pricePence": 595
+    },
+    {
+     "id": "sharing",
+     "label": "Sharing · 700g",
+     "pricePence": 1100
+    }
+   ],
+   "dietary": [
+    "vegetarian"
+   ],
+   "spiceLevel": 1,
+   "ingredients": "Spinach (44%), paneer (**milk**) (24%), onion, **cream (milk)**, rapeseed oil, garlic, ginger, green chilli, ground spices, salt.",
+   "allergens": [
+    "milk"
+   ],
+   "mayContain": [
+    "mustard",
+    "nuts"
+   ],
+   "nutrition": {
+    "energyKcal": 134,
+    "fat": 9.6,
+    "saturates": 4.8,
+    "carbs": 4.1,
+    "sugars": 2,
+    "protein": 7.2,
+    "salt": 0.6
+   },
+   "storage": "Keep frozen at -18°C or below. Put straight into the freezer when your delivery arrives. If the product has defrosted, keep it refrigerated, use within 24 hours and do not refreeze.",
+   "preparation": [
+    "Cook from frozen — there is no need to defrost.",
+    "Microwave (800W): pierce the film, heat for 5 minutes, stir, then heat for a further 3–4 minutes.",
+    "Oven: empty into an ovenproof dish, cover and bake at 180°C fan for 35–40 minutes, stirring halfway.",
+    "Check the food is piping hot throughout before serving. Do not refreeze."
+   ],
+   "servings": "Single serves 1 · Sharing serves 2",
+   "active": true,
+   "inStock": true,
+   "maxPerOrder": 12,
+   "popularity": 66,
+   "featured": false,
+   "daysAgo": 5
+  },
+  {
+   "slug": "basmati-rice",
+   "name": "Steamed Basmati Rice",
+   "range": "frozen",
+   "category": "sides",
+   "shortDescription": "Separate, fluffy long-grain basmati. Steam in the pouch.",
+   "description": "Aged basmati steamed and frozen in grains, so it comes back fluffy and separate in minutes.",
+   "image": "/images/products/basmati-rice.jpg",
+   "gallery": [
+    "/images/products/basmati-rice.jpg",
+    "/images/products/basmati-rice-detail.jpg"
+   ],
+   "variants": [
+    {
+     "id": "standard",
+     "label": "Pouch · 250g",
+     "pricePence": 250
+    }
+   ],
+   "dietary": [
+    "vegan",
+    "vegetarian"
+   ],
+   "spiceLevel": 0,
+   "ingredients": "Cooked basmati rice (98%), rapeseed oil, salt.",
+   "allergens": [],
+   "mayContain": [],
+   "nutrition": {
+    "energyKcal": 138,
+    "fat": 1.6,
+    "saturates": 0.2,
+    "carbs": 27.9,
+    "sugars": 0.1,
+    "protein": 3,
+    "salt": 0.25
+   },
+   "storage": "Keep frozen at -18°C or below. Put straight into the freezer when your delivery arrives. If the product has defrosted, keep it refrigerated, use within 24 hours and do not refreeze.",
+   "preparation": [
+    "Cook from frozen.",
+    "Oven: place on a baking tray at 190°C fan for 10–12 minutes until piping hot.",
+    "Rice: microwave (800W) in the pierced pouch for 3–4 minutes."
+   ],
+   "servings": "Serves 1–2",
+   "active": true,
+   "inStock": true,
+   "maxPerOrder": 12,
+   "popularity": 82,
+   "featured": false,
+   "daysAgo": 80
+  },
+  {
+   "slug": "garlic-naan",
+   "name": "Garlic & Coriander Naan",
+   "range": "frozen",
+   "category": "sides",
+   "shortDescription": "Stone-baked naan with garlic butter. Pack of two.",
+   "description": "Stone-baked naan finished with garlic butter and fresh coriander. Bakes from frozen in minutes.",
+   "image": "/images/products/garlic-naan.jpg",
+   "gallery": [
+    "/images/products/garlic-naan.jpg",
+    "/images/products/garlic-naan-detail.jpg"
+   ],
+   "variants": [
+    {
+     "id": "standard",
+     "label": "Pack of 2",
+     "pricePence": 275
+    }
+   ],
+   "dietary": [
+    "vegetarian"
+   ],
+   "spiceLevel": 0,
+   "ingredients": "**Wheat** flour, water, **yoghurt (milk)**, **butter (milk)**, garlic (3%), coriander leaf, rapeseed oil, sugar, yeast, raising agent, salt.",
+   "allergens": [
+    "gluten",
+    "milk"
+   ],
+   "mayContain": [
+    "sesame",
+    "eggs"
+   ],
+   "nutrition": null,
+   "storage": "Keep frozen at -18°C or below. Put straight into the freezer when your delivery arrives. If the product has defrosted, keep it refrigerated, use within 24 hours and do not refreeze.",
+   "preparation": [
+    "Cook from frozen.",
+    "Oven: place on a baking tray at 190°C fan for 10–12 minutes until piping hot.",
+    "Rice: microwave (800W) in the pierced pouch for 3–4 minutes."
+   ],
+   "servings": "Serves 2",
+   "active": true,
+   "inStock": true,
+   "maxPerOrder": 12,
+   "popularity": 81,
+   "featured": false,
+   "daysAgo": 75
+  },
+  {
+   "slug": "vegetable-samosas",
+   "name": "Vegetable Samosas",
+   "range": "frozen",
+   "category": "sides",
+   "shortDescription": "Crisp pastry parcels of spiced potato and pea. Pack of four.",
+   "description": "Hand-folded pastry filled with spiced potato, peas and coriander. Bake from frozen until blistered and crisp.",
+   "image": "/images/products/vegetable-samosas.jpg",
+   "gallery": [
+    "/images/products/vegetable-samosas.jpg",
+    "/images/products/vegetable-samosas-detail.jpg"
+   ],
+   "variants": [
+    {
+     "id": "standard",
+     "label": "Pack of 4",
+     "pricePence": 325
+    }
+   ],
+   "dietary": [
+    "vegan",
+    "vegetarian"
+   ],
+   "spiceLevel": 1,
+   "ingredients": "Potato (38%), **wheat** flour, garden peas (12%), rapeseed oil, onion, coriander leaf, green chilli, ground spices, cumin seed, salt.",
+   "allergens": [
+    "gluten"
+   ],
+   "mayContain": [
+    "mustard",
+    "sesame"
+   ],
+   "nutrition": null,
+   "storage": "Keep frozen at -18°C or below. Put straight into the freezer when your delivery arrives. If the product has defrosted, keep it refrigerated, use within 24 hours and do not refreeze.",
+   "preparation": [
+    "Cook from frozen.",
+    "Oven: place on a baking tray at 190°C fan for 10–12 minutes until piping hot.",
+    "Rice: microwave (800W) in the pierced pouch for 3–4 minutes."
+   ],
+   "servings": "Serves 2",
+   "active": true,
+   "inStock": true,
+   "maxPerOrder": 12,
+   "popularity": 74,
+   "featured": true,
+   "daysAgo": 55
+  },
+  {
+   "slug": "garden-vegetable-curry",
+   "name": "Garden Vegetable Curry",
+   "range": "frozen",
+   "category": "vegetarian",
+   "shortDescription": "Seasonal vegetables in a light, fragrant coconut sauce.",
+   "description": "Cauliflower, green beans, carrot and potato in a light coconut sauce scented with curry leaf and mustard seed.",
+   "image": "/images/products/garden-vegetable-curry.jpg",
+   "gallery": [
+    "/images/products/garden-vegetable-curry.jpg",
+    "/images/products/garden-vegetable-curry-detail.jpg"
+   ],
+   "variants": [
+    {
+     "id": "single",
+     "label": "Single · 350g",
+     "pricePence": 550
+    },
+    {
+     "id": "sharing",
+     "label": "Sharing · 700g",
+     "pricePence": 1020
+    }
+   ],
+   "dietary": [
+    "vegan",
+    "vegetarian"
+   ],
+   "spiceLevel": 1,
+   "ingredients": "Mixed vegetables (52%) (cauliflower, potato, carrot, green beans), coconut milk, onion, rapeseed oil, ginger, garlic, **mustard** seed, curry leaf, ground spices, salt.",
+   "allergens": [
+    "mustard"
+   ],
+   "mayContain": [],
+   "nutrition": {
+    "energyKcal": 96,
+    "fat": 5.2,
+    "saturates": 3,
+    "carbs": 8.4,
+    "sugars": 2.8,
+    "protein": 2.4,
+    "salt": 0.5
+   },
+   "storage": "Keep frozen at -18°C or below. Put straight into the freezer when your delivery arrives. If the product has defrosted, keep it refrigerated, use within 24 hours and do not refreeze.",
+   "preparation": [
+    "Cook from frozen — there is no need to defrost.",
+    "Microwave (800W): pierce the film, heat for 5 minutes, stir, then heat for a further 3–4 minutes.",
+    "Oven: empty into an ovenproof dish, cover and bake at 180°C fan for 35–40 minutes, stirring halfway.",
+    "Check the food is piping hot throughout before serving. Do not refreeze."
+   ],
+   "servings": "Single serves 1 · Sharing serves 2",
+   "active": true,
+   "inStock": false,
+   "maxPerOrder": 12,
+   "popularity": 40,
+   "featured": false,
+   "daysAgo": 2
+  }
+ ]
+}
